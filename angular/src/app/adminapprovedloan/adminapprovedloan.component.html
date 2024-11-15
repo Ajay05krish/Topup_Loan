@@ -1,0 +1,62 @@
+<div class="whole" [ngStyle]="{backgroundImage:'url(https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)'}">
+<div class="container" id ="image">
+    <form class="search">
+        
+       
+        <div class="input-group rounded">
+            <input type="text" [(ngModel)]="id" name="search" class="form-control rounded" placeholder="Enter loan id to search" aria-label="Search" aria-describedby="search-addon" />
+            <span class="input-group-text border-0" id="search-addon">
+              <i (click)="searchCustomer(id)" class="fas fa-search"></i>
+            </span>
+          </div>
+    </form>
+    <table class="back">
+        <th></th>
+        <tbody>
+            <tr *ngFor="let i of users">
+                <div *ngIf="i.apprej!=null">
+                    <div class="detailsofcustomer">
+                        <div class="first">
+                            <td>Applicant Name : {{ i.applicantName }}</td>
+                            <td>Loan Id : {{ i.loanId }}</td>
+                            <td>Applicant Type : {{ i.loantype }}</td>
+                        </div>
+                        <div>
+                            <td>Applicant Address : {{ i.applicantAddress }}</td>
+                            <td>Applicant Mobile : {{ i.applicantMobile }}</td>
+    
+                        </div>
+                        <div>
+                            <td>Applicant Email : {{ i.applicantEmail }}</td>
+                            <td>Applicant Aadhar No : {{ i.applicantAadharr }}</td>
+                            
+    
+                        </div>
+                        <div>
+                            <td>Applicant Pan No : {{ i.applicantPan }}</td>
+                            <td>Applicant Salary : {{ i.applicantSalary }}</td>
+                            <td>Amount Required : {{ i.loanAmountRequired }}</td>
+                            <td>Repayment Months :  {{i.repaymentMonths}}</td>
+                        </div>
+                        <br>
+                        <div class="buttons">
+                            <td><button (click)="deleteCustomer(i.loanId)" class="btn btn-danger float-right ml-200">Delete</button>
+                                <button (click)="customerDetails(i.loanId)" class="btn btn-primary"
+                                    >View</button>
+                                <button (click)="editCustomer(i.loanId)" class="btn btn-primary float-right ml-200"
+                                    > Edit</button>
+                            </td>
+                            <container-element [ngSwitch]="i.apprej">
+                                <label *ngSwitchCase="'app'"> <button class="btn btn-success"
+                                        value="Approved">Approved</button></label>
+                                <label *ngSwitchCase="'rej'"><button
+                                        class="btn btn-mini btn-danger">Rejected</button></label>
+                            </container-element>
+                        </div>
+                    </div>
+                </div>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>

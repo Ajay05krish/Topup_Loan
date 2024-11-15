@@ -1,0 +1,58 @@
+<div class="main-tag">
+    <div class="sub" >
+      <h1 class="money">🎉</h1>
+      <h1>Thank you for applying loan </h1>
+      <h3>Take some time to fill some Feedback !</h3>
+      <input
+      style="
+        border-radius: 10px;
+        font-size: 20px;
+        width: 100%;
+        height: 70px;
+        padding: 10px;
+        margin: 20px;
+        text-align: center;
+      "
+      type="text"
+      name="name"
+      id="name"
+      placeholder="Enter Your Name"
+      [(ngModel)]=feed.name
+    
+    />
+        <input
+          style="
+            border-radius: 10px;
+            font-size: 20px;
+            width: 100%;
+            height: 70px;
+            padding: 10px;
+            margin: 20px;
+            text-align: center;
+          "
+          type="text"
+          name="comments"
+          id="comments"
+          placeholder="Comments"
+          [(ngModel)]=feed.comments
+        
+        />
+        <input
+          style="
+            border-radius: 10px;
+            font-size: 20px;
+            width: 20%;
+            height: 50px;
+            padding: 10px;
+            text-align: center;
+          "
+          type="text"
+          name="rate"
+          id="rating"
+          placeholder="Rating"
+          [(ngModel)]=feed.rating
+        />
+        <button (click)="add()" routerLink="/thankYou">Submit</button>
+    </div>
+  </div>
+  

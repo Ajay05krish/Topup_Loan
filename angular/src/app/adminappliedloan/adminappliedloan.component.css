@@ -1,0 +1,38 @@
+.container
+{
+    background-color: rgb(255, 255, 255);
+    image-rendering: auto;
+    padding: 20px;
+    width: 930px;
+    border-radius: 20px;
+    border: 2px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.detailsofcustomer
+{
+    background-color: rgb(187, 172, 125);
+    padding: 20px;
+    font-weight: bold;
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 3px;
+    border-radius: 20px;
+    border: 2px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#reject
+{
+    margin-left: 10px;
+}
+.whole
+{
+    padding: 2%;
+}
+.td{
+    word-spacing: 10px;
+}
+container-element{
+ display: flex;
+ justify-content: center;
+}

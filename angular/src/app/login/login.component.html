@@ -1,0 +1,25 @@
+<div class="main">
+  <div class="nav-bar">
+    <h2>Login</h2>
+  </div>
+  <div class="log"
+    [ngStyle]="{backgroundImage:'url(https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=852&q=80)'}">
+    <div class="log-box">
+      <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+        <div>
+          <input type="text" ngModel name="userName" id="userName" placeholder="Enter your username"
+            class="form-control mb-3">
+        </div>
+        <div>
+          <input type="password" ngModel name="userPassword" id="userPassword" placeholder="Enter your password"
+            class="form-control mb-3">
+        </div>
+        <div class="size">
+          <button id="loginButton" class="btn btn-primary" type="submit" value="Login">Login </button>
+          <p class="green">New User/Admin ? <a routerLink="/registerNewUser">Sign up</a> </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

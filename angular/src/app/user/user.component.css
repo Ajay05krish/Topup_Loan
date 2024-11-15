@@ -1,0 +1,16 @@
+/* .card{
+   margin-top: 2px;
+   background-size: 100px;
+   width: 1200px;
+} */
+.image{
+    height: 100px;; background-size:cover; 
+    width: 250px;
+    margin-left: 350px;
+    background-image:url('../../assets/welcomeUser1.jpg');
+    background-position:50% 50%;
+    padding: 23%;
+}
+.bg{
+    background-image: linear-gradient(to right,lightgreen,white,white,lightgreen);
+}

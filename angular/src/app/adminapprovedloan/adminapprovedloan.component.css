@@ -1,0 +1,46 @@
+.container
+{
+    background-color: rgb(255, 255, 255);
+    image-rendering: auto;
+    padding: 20px;
+    width: 930px;
+    border-radius: 20px;
+    border: 2px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.apprejbutton
+{
+    margin-left: 10px;
+}
+.detailsofcustomer
+{
+    background-color: rgb(187, 172, 125);
+    padding: 10%;
+    margin-top: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 3px;
+    border-radius: 20px;
+    border: 2px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.whole 
+{
+  
+    padding: 3%;
+}
+.row
+{
+    margin-top: 7px;
+}
+
+#blue
+{
+    margin-left: 6%;
+    margin-top: 2%;
+}
+container-element{
+    display: flex;
+    justify-content: center;
+}

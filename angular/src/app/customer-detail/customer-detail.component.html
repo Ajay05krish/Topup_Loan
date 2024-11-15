@@ -1,0 +1,25 @@
+<div [ngStyle]="{backgroundImage:'url(https://images.unsplash.com/photo-1625225233840-695456021cde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)'}">
+<h2>Customer Details</h2> 
+<div *ngIf="model">
+    <div class="whole">
+        <label><b>Loan Id: {{model.loanId}}</b></label><br>
+        <label><b>Loan Type:{{model.loantype}}</b></label><br>
+		<label><b>ApplicantName:{{model.applicantName}}</b></label><br>
+		<label><b>applicantAddress:{{model.applicantAddress}}</b></label><br>
+		<label><b>ApplicantMobile:{{model.applicantMobile}}</b></label><br>
+		<label><b>ApplicantEmail:{{model.applicantEmail}}</b></label><br>
+		<label><b>ApplicantAadharrNo:{{model.applicantAadharr}}</b></label><br>
+		<label><b>ApplicantPanNo:{{model.applicantPan}}</b></label><br>
+		<label><b>ApplicantSalary:{{model.applicantSalary}}</b></label><br>	
+		<label><b>RepaymentMonths:{{model.repaymentMonths}}</b></label><br>	
+		<label><b>Document Id:{{docDetails.documentId}}</b></label><br>
+		<label><b>DocumentName:{{docDetails.documentName}}</b></label><br>
+		<label><b>DocumentType:{{docDetails.documentType}}</b></label><br>	
+		<a [href]="fileUrl" class="aa" *ngIf=fileUrl download="file.txt" target="_blank">View the document</a>
+		<br>										
+    </div>
+	<button (click)="list()"  class="btn btn-primary">Back to customerDetails</button>
+	<button (click)="list1()" id="button" class="btn btn-primary">Back to Search</button>
+</div>
+<br>
+</div>

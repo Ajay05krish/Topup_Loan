@@ -1,0 +1,66 @@
+<div *ngIf="model" [ngStyle]="{backgroundImage:'url(https://images.unsplash.com/photo-1625225233840-695456021cde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)'}">
+    <form class="search">
+        <input type="text" [(ngModel)]="id" name="search" placeholder="Enter loan id to search">
+        <button (click)="searchCustomer(id)" class="btn btn-primary" style="margin-left: 10px">Search</button>
+    </form>
+<table class="back">
+    <th></th>
+    <tbody>
+        <tr>
+        <div class="detailsofcustomer">
+          <div class="first">
+            <tr>
+                <td>Applicant Name:</td>
+                <td>{{model.applicantName}}</td>
+              </tr>
+              <tr>
+                <td>Loan Id:</td>
+                <td>{{ model.loanId }}</td>
+              </tr>
+              <tr>
+                <td>Applicant Address:</td>
+                <td>{{model.applicantAddress}}</td>
+              </tr>
+              <tr>
+                <td>Applicant Mobile:</td>
+                <td>{{model.applicantMobile}}</td>
+              </tr>
+              <tr>
+                <td>Applicant Email:</td>
+                <td>{{model.applicantEmail}}</td>
+              </tr>
+              <tr>
+                <td>Applicant Aadhar No:</td>
+                <td>{{model.applicantAadharr}}</td>
+              </tr>
+              <tr>
+                <td>Applicant Pan No:</td>
+                <td>{{model.applicantPan}}</td>
+              </tr>
+              <tr>
+                <td>Applicant Salary:</td>
+                <td>{{model.applicantSalary}}</td>
+              </tr>
+              <tr>
+                <td>Amount Required:</td>
+                <td>{{model.loanAmountRequired}}</td>
+              </tr>
+              <tr>
+                <td>Repayment Months:</td>
+                <td>{{model.repaymentMonths}}</td>
+              </tr>
+    
+             <td> <button routerLink="/adminapprovedloan" class="btn btn-primary" style="margin-left: 10px" >Back to Search</button></td>
+        </div>
+    </div>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div *ngIf="!model">
+    <form class="search">
+        <input type="text" [(ngModel)]="id" name="seach" placeholder="Enter loan id to search">
+        <button (click)="searchCustomer(id)" class="btn btn-primary" style="margin-left: 10px">Search</button>
+    </form>
+   <p class="wrong"> Enter Correct Id   <button routerLink="/adminapprovedloan" class="btn btn-primary" style="margin-left: 10px">Back to Search</button></p>
+</div>  

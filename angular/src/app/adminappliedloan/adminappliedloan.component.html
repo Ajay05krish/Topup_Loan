@@ -1,0 +1,61 @@
+<div class="whole" [ngStyle]="{backgroundImage:'url(https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)'}">
+<div class="container" id ="image">
+  <table class="back">
+    <th></th>
+    <tbody>
+      <tr *ngFor="let i of users">
+        <div class="detailsofcustomer">
+          <div class="first">
+            <td>Applicant Name : {{ i.applicantName }}</td>
+            <td>Loan Id : {{ i.loanId }}</td>
+            <td>Applicant Type : {{ i.loantype }}</td>
+          </div>
+          <div>
+            <td>Applicant Address : {{ i.applicantAddress }}</td>
+            <td>Applicant Mobile : {{ i.applicantMobile }}</td>
+          </div>
+          <div>
+            <td>Applicant Email : {{ i.applicantEmail }}</td>
+            <td>Applicant Aadhar No : {{ i.applicantAadharr }}</td>
+          </div>
+          <div>
+            <td>Applicant Pan No : {{ i.applicantPan }}</td>
+            <td>Applicant Salary : {{ i.applicantSalary }}</td>
+            <td>Amount Required : {{ i.loanAmountRequired }}</td>
+            <td>Repayment Months :{{i.repaymentMonths}}</td>
+          </div>
+          <div class="buttons">
+            <td>
+              <button (click)="customerDetails(i.loanId)" class="btn btn-primary ">View</button>
+              <button  (click)="deleteCustomer(i.loanId)" class="btn btn-danger float-right ml-200" > Delete</button>
+              <button  (click)="editCustomer(i.loanId)" class="btn btn-primary float-right ml-200" >Edit</button>
+              
+            </td>
+            <br>
+            <div *ngIf="i.apprej==null; else elseBlock" style="text-align :center;" routerLinkActive="active"
+              class="buttons">
+              <button class="btn btn-success" (click)="approveLoan(i.loanId)" routerLink="/adminapprovedloan"
+                value="approveTask">Approve</button>
+              <button class="btn btn-danger float-center ml-2" (click)="rejectLoan(i.loanId)"
+                routerLink="/adminapprovedloan">Reject</button>
+            </div>
+            <ng-template #elseBlock>
+              <container-element [ngSwitch]="i.apprej">
+                <label *ngSwitchCase="'app'"> <button class="btn btn-mini btn-success " value="Approved">Approved</button></label>
+                <label *ngSwitchCase="'rej'"><button class="btn btn-danger">Rejected</button></label>
+              </container-element>
+  
+              <ng-template *ngIf="i.apprej!='';else thenBlock">
+                <button class="btn btn-mini btn-primary" value="Approved">Approved</button>
+              </ng-template>
+              <ng-template #thenBlock>
+                <button class="btn btn-mini btn-danger ">Rejected</button>
+              </ng-template>
+            </ng-template>
+          </div>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

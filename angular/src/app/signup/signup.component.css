@@ -1,0 +1,78 @@
+.control {
+    font-style: bold;
+}
+
+#signinlink {
+    font-size: medium;
+    font-style: bold;
+}
+
+.Main {
+    padding: 3px;
+    text-align: center;
+    font-size: 20pt
+}
+
+.form {
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.log-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 75vh;
+    padding: 20px;
+}
+
+.heading {
+    margin-top: 5px;
+    margin-right: 50px;
+    margin-left: 50px;
+    color: cornsilk;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: auto;
+    font-size: medium;
+    text-size-adjust: 10px;
+    background-color: #198754;
+
+}
+
+.green {
+    color: green;
+}
+
+.group {
+    height: 25px;
+    font-size: 10pt;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-right: 70px;
+    margin-left: 70px;
+}
+
+.login {
+
+    font-size: medium;
+    margin-left: 1%;
+}
+
+input {
+    border-radius: 20px;
+    border: 2px solid;
+}
+
+.log {
+    margin: 0px 50px;
+    height: 87vh;
+    padding: 50px;
+}
+
+button {
+    margin-top: 2%;
+}

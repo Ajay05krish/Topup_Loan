@@ -1,0 +1,40 @@
+.container {
+    image-rendering: auto;
+    padding: 20px;
+    width: 630px;
+}
+
+.whole {
+    padding: 3%;
+}
+
+.row {
+    margin-top: 7px;
+}
+
+#blue {
+    margin-left: 6%;
+    padding: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-control {
+    margin-top: 2px;
+}
+
+#submit {
+    margin-top: 3%;
+}
+
+input,select {
+    height: 50px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 2px solid;
+}
+.label{
+   margin-left: 20px;
+}
+#applyLoanButton{
+    margin-left: 40%;
+}

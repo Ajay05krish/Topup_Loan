@@ -1,0 +1,23 @@
+<div class="main-tag">
+  <div class="sub">
+    <h1>Customer's feedback</h1>
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Comments</th>
+          <th scope="col">rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let messages of message">
+          <th scope="row">{{messages.id}}</th>
+          <td>{{messages.name}}</td>
+          <td>{{messages.comments}}</td>
+          <td>{{messages.rating}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

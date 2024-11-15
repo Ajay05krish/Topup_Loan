@@ -1,0 +1,67 @@
+<div class="whole" style="filter: opacity(10px); background-color: black;"
+  [ngStyle]="{backgroundImage:'url(https://images.pexels.com/photos/1629172/pexels-photo-1629172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)'}">
+  <div class="input-group">
+    <input type="text" [(ngModel)]="id" name="search" class="form-control rounded" placeholder="Search, with your generated loan id"
+      aria-label="Search" aria-describedby="search-addon" />
+    <button (click)="searchCustomer(id)" type="button" class="btn btn-primary">Track</button>
+  </div>
+
+  <table class="back" *ngIf="model">
+    <th></th>
+    <tbody>
+
+      <div class="detailsofcustomer">
+        <div class="first">
+          <tr>
+            <td>Applicant Name:</td>
+            <td>{{model.applicantName}}</td>
+          </tr>
+          <tr>
+            <td>Loan Id:</td>
+            <td>{{ model.loanId }}</td>
+          </tr>
+          <tr>
+            <td>Applicant Address:</td>
+            <td>{{model.applicantAddress}}</td>
+          </tr>
+          <tr>
+            <td>Applicant Mobile:</td>
+            <td>{{model.applicantMobile}}</td>
+          </tr>
+          <tr>
+            <td>Applicant Email:</td>
+            <td>{{model.applicantEmail}}</td>
+          </tr>
+          <tr>
+            <td>Applicant Aadhar No:</td>
+            <td>{{model.applicantAadharr}}</td>
+          </tr>
+          <tr>
+            <td>Applicant Pan No:</td>
+            <td>{{model.applicantPan}}</td>
+          </tr>
+          <tr>
+            <td>Applicant Salary:</td>
+            <td>{{model.applicantSalary}}</td>
+          </tr>
+          <tr>
+            <td>Amount Required:</td>
+            <td>{{model.loanAmountRequired}}</td>
+          </tr>
+          <tr>
+            <td>Repayment Months:</td>
+            <td>{{model.repaymentMonths}}</td>
+          </tr>
+
+       
+          <container-element [ngSwitch]="model.apprej">
+            <label *ngSwitchCase="'app'"> <button class="btn btn-success" value="Approved">Approved</button></label>
+            <label *ngSwitchCase="'rej'"><button class="btn btn-mini btn-danger">Rejected</button></label>
+            <label *ngSwitchCase=null> <button class="btn btn-warning" value="Approved">In progress</button></label>
+          </container-element>
+        </div>
+      </div>
+
+    </tbody>
+  </table>
+</div>

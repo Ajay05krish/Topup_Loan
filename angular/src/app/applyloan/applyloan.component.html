@@ -1,0 +1,96 @@
+<div class="whole"
+    [ngStyle]="{backgroundImage:'url(https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=852&q=80)'}">
+    <div class="container" id="image">
+        <div class="row">
+            <div class="col-md-12" id="blue">
+                <form [formGroup]="Form" class="form">
+                    <div class="group">
+                        <input type="text" id="enterName" placeholder="Applicant Name" [(ngModel)]="loan.applicantName"
+                            class="form-control" name="applicantName" formControlName="applicantName"
+                            [class.is-invalid]="applicantName?.invalid && applicantName?.touched">
+                    </div>
+
+                    <div class="group">
+                        <input type="text" id="enterAddress" placeholder="Applicant Address"
+                            [(ngModel)]="loan.applicantAddress" class="form-control" name="applicantAddress"
+                            formControlName="applicantAddress"
+                            [class.is-invalid]="applicantAddress?.invalid && applicantAddress?.touched">
+                    </div>
+
+                    <div class="group">
+                        <input type="text" id="enterMobile" placeholder="Applicant Mobile"
+                            [(ngModel)]="loan.applicantMobile" class="form-control" name="applicantMobile"
+                            formControlName="applicantMobile"
+                            [class.is-invalid]="applicantMobile?.invalid && applicantMobile?.touched">
+                    </div>
+
+                    <div class="group">
+                        <input type="text" id="email" [(ngModel)]="loan.applicantEmail" placeholder="Applicant Email"
+                            class="form-control" name="applicantEmail" formControlName="applicantEmail"
+                            [class.is-invalid]="applicantEmail?.invalid && applicantEmail?.touched">
+                    </div>
+
+                    <div class="group">
+                        <input type="text" id="enterAadharrNo" placeholder="Applicant Aadhar No"
+                            [(ngModel)]="loan.applicantAadharr" class="form-control" name="applicantAadharr"
+                            formControlName="applicantAadharr"
+                            [class.is-invalid]="applicantAadharr?.invalid && applicantAadharr?.touched">
+
+                    </div>
+
+                    <div class="group">
+                        <input type="text" id="enterPanNo" placeholder="Applicant Pan No"
+                            [(ngModel)]="loan.applicantPan" class="form-control" name="applicantPan"
+                            formControlName="applicantPan"
+                            [class.is-invalid]="applicantPan?.invalid && applicantPan?.touched">
+
+                    </div>
+                    
+                   
+                    <div class="group">
+                        <input type="text" id="enterSalary" placeholder="Applicant Salary"
+                            [(ngModel)]="loan.applicantSalary" class="form-control" name="applicantSalary"
+                            formControlName="applicantSalary"
+                            [class.is-invalid]="applicantSalary?.invalid && applicantSalary?.touched">
+
+                    </div>
+
+                    <div class="group">
+                        <input type="text" id="enterAmount" placeholder="Loan Amount Required"
+                            [(ngModel)]="loan.loanAmountRequired" class="form-control" name="loanAmountRequired"
+                            formControlName="loanAmountRequired"
+                            [class.is-invalid]="loanAmountRequired?.invalid && loanAmountRequired?.touched">
+
+                    </div>
+
+                    <div class="group">
+                        <input type="text" id="enterMonths" placeholder="Loan Repayment Months"
+                            [(ngModel)]="loan.repaymentMonths" class="form-control" name="repaymentMonths"
+                            formControlName="repaymentMonths"
+                            [class.is-invalid]="repaymentMonths?.invalid && repaymentMonths?.touched">
+
+                    </div>
+                    <div class="group">
+                        <input type="text" id="enterLoanType" placeholder="Loan type(homeloan,vehicleloan,educationloan)"
+                            [(ngModel)]="loan.loantype" class="form-control" name="loantype"
+                            formControlName="loantype">
+                    </div>
+                    
+
+
+                    <div class="groupcom">
+                        <app-user-upload-document></app-user-upload-document>
+                    </div>
+
+                    <div class="group">
+                        <button class="btn btn-success" id="applyLoanButton" (click)="onApplyLoan()"
+                            [disabled]="Form.invalid">
+                            Apply for loan</button>
+                    </div>
+
+                    <div class="text-success group" *ngIf=message>{{message}}</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

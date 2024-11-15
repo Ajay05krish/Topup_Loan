@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="ro">
+            <label for="selectDocumentType" class="label">Upload documents</label>
+            <div>
+                <select class="form-select" name="documents" id="selectDocumentType"
+                    [(ngModel)]="documentType" name="documentType" required>
+
+                    <option value="none" selected disable hidden>Please pick a type</option>
+                    <option value="aadharcard">Aadhar Card</option>
+                    <option value="pancard">Pan Card</option>
+                    <option value="voterid">Voter Id</option>
+                    <option value="passport">Passport</option>
+                </select>
+            </div>
+            <div class="bottom-half">
+                <label class="label"> Images or Documents(Upload below 2mb)</label>
+                <div class="bottom-half">
+                    <label for="chooseFile" class="label custom-file-upload">
+                        <input type="file" id="chooseFile" (change)="onFileChanged($event)" name="file">
+                        Choose a File
+                    </label>
+                
+
+            <div class="bottom-half">
+                <button  class="btn btn-primary" id="uploadDocumentsButton" (click)="onUpload()">Upload
+                    Documents</button>
+            </div>
+
+            <div class="text-success" *ngIf=message>{{message}}</div>
+
+        </div>
+</div>

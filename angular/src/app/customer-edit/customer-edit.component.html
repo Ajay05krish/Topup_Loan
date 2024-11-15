@@ -1,0 +1,48 @@
+<div [ngStyle]="{backgroundImage:'url(https://images.unsplash.com/photo-1625225233840-695456021cde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)'}">
+  <div style="width : 400px;" class="container">
+    <h3>Edit Customer</h3>
+  <form (ngSubmit)="onSubmit()">
+     <div class="form-group">
+      <label for="name">Applicant Name :</label>
+      <input type="text" class="form-control" id="applicantname" name="applicantName"  [(ngModel)]="customer.applicantName" >
+    </div> 
+    <div class="form-group">
+      <label for="name">Loan Type :</label>
+      <input type="text" class="form-control" id="LoanType" required [(ngModel)]="customer.loantype" name="loantype">
+    </div>
+     <div class="form-group">
+      <label for="name">Applicant Address :</label>
+      <input type="text" class="form-control" id="applicantAddress" required [(ngModel)]="customer.applicantAddress" name="applicantAddress">
+    </div>
+      <div class="form-group">
+      <label for="name">Applicant Mobile :</label>
+      <input type="text" class="form-control" id="applicantMobile" required [(ngModel)]="customer.applicantMobile" name="applicantMobile">
+    </div>
+    <div class="form-group">
+      <label for="name">Applicant Email :</label>
+      <input type="text" class="form-control" id="applicantEmail" required [(ngModel)]="customer.applicantEmail" name="applicantEmail">
+    </div>
+ <div class="form-group">
+      <label for="name">Applicant Aadhar No :</label>
+      <input type="text" class="form-control" id="applicantAadhar" required [(ngModel)]="customer.applicantAadharr" name="applicantAadhar">
+    </div>
+     <div class="form-group">
+      <label for="name">Applicant Pan No :</label>
+      <input type="text" class="form-control" id="applicantPan" required [(ngModel)]="customer.applicantPan" name="applicantPan">
+    </div>
+   <div class="form-group">
+      <label for="name">Applicant Salary :</label>
+      <input type="text" class="form-control" id="applicantSalary" required [(ngModel)]="customer.applicantSalary" name="applicantSalary">
+    </div>
+    <div class="form-group">
+      <label for="name">Loan Amount Required :</label>
+      <input type="text" class="form-control" id="loanAmountRequired" required [(ngModel)]="customer.loanAmountRequired" name="loanAmountRequired">
+    </div>
+    <div class="form-group">
+      <label for="name">Loan Repayment Months :</label>
+      <input type="text" class="form-control" id="repaymentMonths" required [(ngModel)]="customer.repaymentMonths" name="repaymentMonths">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+</div>

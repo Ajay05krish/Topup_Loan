@@ -1,0 +1,58 @@
+<div class="Main">
+    <div  class="heading">
+    <h2>Register</h2>
+    </div>
+<div>
+    <div class="log" [ngStyle]="{backgroundImage:'url(https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=852&q=80)'}">
+        <div class="log-box">
+            <form  [formGroup]="Form" class="form"   (ngSubmit)="onSubmit()" >  
+                <div class="group" >
+                    <input type="text" id="email" [(ngModel)]="user.email"  placeholder="Enter email" class="form-control"  name="email" formControlName="email"  [class.is-invalid] = "email?.invalid && email?.touched">
+                    <div *ngIf="email?.invalid && email?.touched" class="text-danger">
+                        <small *ngIf="emailcontrols?.['required']">Email is Required</small>
+                        <small *ngIf="emailcontrols?.['pattern']">Email is Invalid</small>
+                    </div>
+                </div>
+                <div class="group">
+                    <input type="text" id="username" [(ngModel)]="user.username"  placeholder="Enter username" name="userName" class="form-control" formControlName="userName"   [class.is-invalid] = "userName?.invalid && userName?.touched">
+                    <div *ngIf="userName?.invalid && userName?.touched" class="text-danger">
+                        <small *ngIf="userNamecontrols?.['required']">Username is Required</small>
+                        <small *ngIf="userNamecontrols?.['minlength']">Username should be atleast 3 characters</small>
+                    </div>
+                </div>
+                <div class="group">
+                    <input type="tel" id="mobilenumber" [(ngModel)]="user.mobileNumber"  placeholder="Enter Mobile Number"  class="form-control" name="mobileNumber" formControlName="mobileNumber"  [class.is-invalid] = "mobileNumber?.invalid && mobileNumber?.touched" maxlength="10" (keypress)="onlyNumbersAllowed($event)">
+                    <div *ngIf="mobileNumber?.invalid && mobileNumber?.touched" class="text-danger">
+                        <small *ngIf="mobileNumbercontrols?.['required']">Mobile Number is Required</small>
+                        <small *ngIf="mobileNumbercontrols?.['minlength']">Enter 10 digit mobile number</small>
+                    </div>
+                </div>
+                <div class="group">
+                    <input type="password" id="password" [(ngModel)]="user.password"   placeholder="Enter Password" class="form-control" name="password"  formControlName="password"   [class.is-invalid] = "password?.invalid && password?.touched" (change)="onPasswordMatch()">
+                    <div *ngIf="password?.invalid && password?.touched" class="text-danger">
+                        <small *ngIf="passwordcontrols?.['required']">Password is Required</small>
+                        <small *ngIf="passwordcontrols?.['pattern']">
+                            Password should have atleast<br>
+                            *minimum 8 characters<br>
+                            *one capital letter, one small letter<br>
+                            *one number,one special character
+                        </small> 
+                    </div>
+                </div>
+                <div class="group">
+                    <input type="password" id="confirmPassword" [(ngModel)]="cp" placeholder="Confirm Password" class="form-control" name="confirmPassword" formControlName="confirmPassword"  [class.is-invalid] = "confirmPassword?.invalid && confirmPassword?.touched" (change)="onPasswordMatch()">
+                    <div *ngIf="confirmPassword?.invalid && confirmPassword?.touched" class="text-danger">
+                        <small *ngIf="confirmPasswordcontrols.errors?.['required']">Confirm Password is Required</small>
+                        <small *ngIf="confirmPasswordcontrols.hasError('mismatch')">Confirm Password does not match.</small>
+                    </div>
+                </div>
+                <button id="sumbitButton" class="btn btn-primary" [disabled]="Form.invalid">Submit</button>
+                <div>
+                    <label id="signinlink" class="green">Already a user?</label>
+                    <a class="login" routerLink="/login">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,11 @@
+.image{
+    height: 100px;; background-size:cover; 
+    width: 250px;
+    margin-left: 350px;
+    background-image:url('../../assets/welcomeAdmin.jpeg');
+    background-position:50% 50%;
+    padding: 23%;
+}
+.bg{
+    background-image: linear-gradient(to right,lightgreen,white,white,lightgreen);
+}

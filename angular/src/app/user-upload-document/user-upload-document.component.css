@@ -1,0 +1,39 @@
+input[type="file"] {
+    display: none;
+}
+
+.bottom-half {
+    margin-bottom: 15px;
+    margin-top: 10px;
+
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.label {
+    font-size: medium;
+    font-style: bold;
+
+}
+
+select {
+    color: black;
+    width: 40%;
+    margin-top: 10px;
+    height: 35px;
+}
+
+option {
+    font-size: medium;
+    font-style: bold;
+}
+
+.aa {
+    font-size: medium;
+    font-style: large;
+}
